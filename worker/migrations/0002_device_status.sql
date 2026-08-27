@@ -1,0 +1,6 @@
+ALTER TABLE devices ADD COLUMN last_seen_at TEXT;
+ALTER TABLE devices ADD COLUMN ip TEXT;
+ALTER TABLE devices ADD COLUMN state TEXT;
+ALTER TABLE devices ADD COLUMN current_target TEXT;
+ALTER TABLE devices ADD COLUMN next_ping_at TEXT;
+ALTER TABLE devices ADD COLUMN rssi INTEGER;

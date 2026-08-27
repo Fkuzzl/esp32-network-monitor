@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "replace-with-your-worker-name",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "replace-with-your-database-name",
+      "database_id": "replace-with-your-d1-database-id",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "REPORT_TIMEZONE": "Asia/Shanghai",
+    "OPENROUTER_MODEL": "replace-with-openrouter-model",
+    "MAX_COMMAND_AGE_SECONDS": "900",
+    "DATA_RETENTION_DAYS": "31",
+    "DEVICE_ID": "replace-with-device-id"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "secrets": {
+    "required": [
+      "OPENROUTER_API_KEY",
+      "TELEGRAM_BOT_TOKEN",
+      "TELEGRAM_CHAT_ID",
+      "TELEGRAM_WEBHOOK_SECRET",
+      "ESP32_DEVICE_TOKEN",
+      "ADMIN_API_KEY"
+    ]
+  }
+}
