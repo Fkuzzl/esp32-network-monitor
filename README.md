@@ -18,15 +18,11 @@ The ESP32 discovers its DHCP-assigned IPv4 subnet and performs the LAN scan loca
 
 ## Architecture
 
-```text
-Local network
-  ESP32 + OLED/button
-    |-- ICMP ping --> LAN devices
-    `-- HTTPS -----> Cloudflare Worker
-                         |-- D1
-                         |-- Telegram Bot API
-                         `-- OpenRouter (aggregate daily analysis only)
-```
+[![ESP32 Network Monitor system architecture showing the end user, Telegram bot, Cloudflare Worker, D1 database, OpenRouter, ESP32 firmware, OLED and button, and LAN devices](docs/images/system-architecture.png)](docs/images/system-architecture.png)
+
+_Diagram created with [Archify](https://github.com/tt-a1i/archify)._
+
+_Click the diagram to open the full-resolution image._
 
 Raw scan observations remain in D1. OpenRouter receives defensive aggregate metrics and online-observed device measurements; it does not control Telegram commands or scanning.
 
